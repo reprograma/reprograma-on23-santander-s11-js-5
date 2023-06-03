@@ -128,7 +128,7 @@ Esta é a 11ª semana da turma online: Todas em Tech on23 - Front-end, nesta aul
 ---
 ### 1.6. Vamo exercitar?
 
-## [hacker()](https://hackear.herokuapp.com/api-docs/)
+## [hackear()](https://hackear.herokuapp.com/api-docs/)
 
 ---
 ## 2. Arrow Fuctions
