@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+
+}
+
+.name {
+    margin: 3px;
+    height: 25px;
+    width: 150px;
+    text-align: center;
+    
+}
+
+#descricao {
+    background-color: white;
+    text-align: right;
+    margin-right: 8px;
+}
+
+#lista {
+    flex-wrap: wrap;
+    height: 80px;
+    width: 70%;
+}
+
