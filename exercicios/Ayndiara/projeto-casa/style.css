@@ -1,0 +1,27 @@
+body {
+    background-color: #000;
+  }
+  
+  input[type="text"],
+  button {
+    background-color: #000;
+    color: #ff0000;
+  }
+  
+  #card {
+    background-color: #000;
+    color: #ff0000;
+  }
+  #digimonNameInput {
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    padding: 12px 20px;
+  }
