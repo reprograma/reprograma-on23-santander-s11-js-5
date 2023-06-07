@@ -21,5 +21,5 @@ async function getReturn() {
       }
   }
 
-  //desisti, desculpa por não tentar mais professora, espero que revisando esse conteúdo inavada a minha mente. 
+  //desisti, desculpa por não tentar mais professora, espero que revisando esse conteúdo inavada a minha mente porque tá complicado. 
   
