@@ -2,44 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 10px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-family: 'Shadows Into Light', cursive;
   }
   
   body {
     max-width: 100%;
-    background-color:  #2d3436; /*https://flatuicolors.com/palette/de*/
-    margin: 40px;
+    background-color:  #0984e3;
+    margin: 20px;
     align-items: center;
   }
 
-  .cabeçalho{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    border-radius: 15%;
+  #cabeçalho{
     max-width: 100%;
+    margin: 0;
   }
 
-  .movie{
-    width: 20%;
-    height: 25%;
-    margin: 3rem;
-  }
-
-  h1{
-    font-family: 'Kanit', sans-serif;;
-    font-size: 6rem;
-    font-weight: bold;
-    color: grey;
-    margin: 3rem;
-  }
   
+
+  #buscar{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 5px;
+    border-radius:5%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #digis{
+    display: flex;
+    max-width: 99%;
+    margin-top: 50px;
+  }
+
   #demo {
     display: inline-block;
-    max-width: 100%;
+    max-width: 70%;
+  }
+
+  #digi{
+    background-color: #e1b12c;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5%;
+    max-width: 20%;
+    display: inline-block;
+    justify-content: baseline;
+    align-items: center;
+    text-align: center;
+    color: blue;
+    font-size: 20px;
+  }
+
+  #card{
+    background-color: #74b9ff;
+    max-width: 30%;
+    max-height: 30rem;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0;
+    border-radius: 5%;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  h4{
+    font-size: 30px;
+  }
+
+  /* .cardInicial{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
     align-items:baseline;
+    text-align: center;
     margin-top: 50px;
+  } */
+
+  img{
+    max-width: 95%;
+    height: 70%;
+    margin-top: 0.5rem;
   }
   
   .title {

@@ -1,36 +1,78 @@
 const container = document.getElementById('demo')
+const digimon = document.getElementById('digimonName')
+const card = document.getElementById('card')
+const buscar = document.getElementById('buscar')
 
-function createCards(card){
-    return `
-    <div class="cardInicial">
-        <img src="${card.img}"/>
-        <h2 class="digiName"> ${card.name} </h2>
-        <h3 class="level"> ${card.level} </h3>
-    </div>
-    `
-}
+
+// buscar.addEventListener('click', (event)=> {
+//     event.preventDefault()
+//     findDigimon(digimon)
+// })
+
+
+// digimon.addEventListener('click', (event)=>{
+//     event.preventDefault();
+//     createCardDigimon('${digi.name}');
+// });
+
 
 async function getDigimons(){
     try {
-        const digimons = await fetch("https://digimon-api.vercel.app/api/digimon") 
-        const response = await digimons.json()
-        return response
+        const digimons = await fetch(`https://digimon-api.vercel.app/api/digimon/`) 
+        const digimonNames = await digimons.json()
+        return digimonNames
     } catch (erro) {
         console.error("Erro capturado: " + erro)
     }
 }
 
+function input(digimon){
+    return `
+    <input id="digi" type="button" value="${digimon.name}" onclick="createCardDigimon('${digimon.name}')">
+  `
+}
+
 async function main(){
-    const cardsDigimons = await getDigimons()
-    cardsDigimons.map((card) => {container.innerHTML += createCards(card)})
+        const digiName = await getDigimons( )
+        digiName.map((digimon) => {container.innerHTML += input(digimon)})
 }
 
-main()
+main()   
 
-function clickDigimon(){
-    // ao clicar na img do digimon aparece um card maior na tela com mais informações daquele digimon clicado
+async function findDigimon(digi){
+    try {
+        let digimon = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${digi}`);
+        let infos = await digimon.json();
+        createCardDigimon(digi)
+    } catch (erro) {
+        console.error("Erro capturado: " + erro)  
+    }
 }
 
-function clickBuscar(){
-//  ao clicar em buscar, busca os digimons com os termos digitados no input
+function createCardDigimon(digi){
+    card.innerHTML += `
+        <img src="${digi.img}">
+        <h3>${digi.name}</h3>
+        <h4 id="level">Level: ${digi.level}</h4>
+    `
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
