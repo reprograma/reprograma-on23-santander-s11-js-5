@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: rgb(58,180,152);
+    background: linear-gradient(90deg, rgba(58,180,152,1) 1%, rgba(131,122,230,1) 71%, rgba(255,255,255,1) 100%);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  #digimon-info {
+    text-align: center;
+  }
+  
