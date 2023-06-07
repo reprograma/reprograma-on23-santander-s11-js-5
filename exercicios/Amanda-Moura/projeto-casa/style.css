@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  align-items: center;
+  justify-self: center;
+}
+
+body {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  align-items: center;
+  background-size: cover;
+  background-color: hsl(222, 39%, 49%);;
+}
+
+#demo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  justify-self: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.level{
+  font-size: 18px;
+}
+
+#button {
+  padding: 10px;
+  background-color: hwb(285 30% 32%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#input {
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+}
