@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'MonospaceTypewriter';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MonospaceTypewriter'), url('MonospaceTypewriter.woff') format('woff');
+
+}
+
+* {
+margin: 10;
+padding: 10;
+box-sizing: border-box;
+font-size: 11px;
+
+}
+
+#imagemDigimon {
+    width: 20%;
+
+}
+
+#digimonList {
+    display: grid;
+    grid-template-columns: repeat(11, 0fr);
+}
+
+#banner {
+    display: block;
+    margin: auto;
+
+}
