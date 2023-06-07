@@ -1,0 +1,33 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+button {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.digimon-info {
+    text-align: center;
+    margin-top: 20px;
+}
+.digimon-info h2 {
+    margin-bottom: 5px;
+}
+.digimon-info img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
