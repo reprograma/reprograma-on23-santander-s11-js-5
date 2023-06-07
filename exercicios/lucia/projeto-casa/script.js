@@ -53,7 +53,7 @@ async function searchDigimon() {
   try {
     const digimonName = document.getElementById('digimonInput').value;
     const response = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${digimonName}`);
-    const [digimon] = await response.json();
+    const digimon = await response.json();
     if (digimon ) {
       showDetails(digimon.img);
     } else {
