@@ -3,21 +3,28 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-  align-items: center;
-  justify-self: center;
+  align-items: self-start;
+  justify-self: self-start;
 }
 
 body {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   margin-left: 20px;
   align-items: center;
-  background-size: cover;
-  background-color: hsl(222, 39%, 49%);;
+  background: linear-gradient(#f69d3c, #dac90f, #3f87a6);
+  font-family: 'Roboto', sans-serif;
 }
 
-#demo {
+#demo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -35,29 +42,41 @@ body {
 .name {
   font-size: 18px;
   font-weight: bold;
+  color: hsl(233, 44%, 35%);
 }
 
 .img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  background-image: transparent;
+  border-radius: 15%;
 }
 
 .level{
   font-size: 18px;
+  color: hsl(233, 44%, 35%);
 }
+
 
 #button {
   padding: 10px;
-  background-color: hwb(285 30% 32%);
+  background: radial-gradient(#f69d3c, #3f87a6);
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
+  margin-left:15px;
+  font-weight: 500;
 }
 
 #input {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
-  display: flex;
+  font-size: 20px;
+}
+
+#logo{
+  height: 15vh;
+  margin-bottom: 20px;
 }

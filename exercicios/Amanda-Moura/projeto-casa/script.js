@@ -1,4 +1,4 @@
-const container = document.getElementById('demo');
+const container = document.getElementById('cards');
 const searchInput = document.getElementById('input');
 const searchButton = document.getElementById('button');
 let digimons = [];
