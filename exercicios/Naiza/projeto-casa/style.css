@@ -1,0 +1,75 @@
+body { 
+    font-family: 'Press Start 2P', cursive;
+    background: url(./assets/roxo\ digimon.jpg);
+    background-size: cover;
+}
+
+
+header{
+    display : flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+header img{
+    width: 300px;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#lista {
+    width: 60vw ;
+    height: 60vh;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 20px;
+    background: url(./assets/fundo\ digimon.jpg);
+    background-size: cover;
+}
+ 
+#lista::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#lista::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+#lista::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #D62929;
+}
+
+#digimon {
+    width: 25vw;
+}
+
+.digimon-card{
+    height: 400px;
+    padding: 35px;
+    border-radius: 25px;
+    background: url(./assets/fundo\ digimon.jpg);
+}
+
+.digimon-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+input {
+    margin: 4px;
+    height: 25px;
+    width: 165px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    border-radius: 10px;
+    
+}
