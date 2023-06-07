@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: rgb(54, 50, 52);
+    font-family: 'Open Sans', sans-serif;
+   
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30px;
+    color: aliceblue;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campoDeBusca{
+    text-align: center;
+    height: 40px;
+    margin-top: 50px;
+    gap: 4px;
+}
+label{
+    color: aliceblue;
+}
+
+input{
+    width: 350px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+   
+}
+
+button{
+    border:none;
+    border-radius: 8px;
+    background-color: blueviolet;
+    width: 90px;
+    height:40px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+
+ section .cards {
+    background: rgba(192, 144, 221, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+} 
