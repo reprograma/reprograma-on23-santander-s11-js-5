@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="IMG/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>DIGIDEX</title>
 </head>
+
 <body>
-    
+    <main id="container-main">
+        <div id="digimon">
+            <img class="logo__digimon" src="IMG/Digimon-Logo.png" alt="">
+            <div class="card_main">
+                <img src="IMG/cover_.png" alt="" class="card__img">
+                <h5 class="card__name"></h5>
+                <p class="card__text"></p>
+            </div>
+        </div>
+
+        <div class="container__input">
+            <input type="text" id="input_search" placeholder="Buscar Digimon">
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
