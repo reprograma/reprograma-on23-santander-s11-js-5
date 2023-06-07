@@ -1,0 +1,73 @@
+ @import url('https://fonts.cdnfonts.com/css/digimonbasic');
+
+ * {
+    font-family: 'DigimonBasic', sans-serif;
+                                                
+ }
+
+ body {
+   background-image: linear-gradient(to right, #0b4a84, #fca745);
+ }
+
+ #header {
+   height: 200px;
+   text-align: center;
+   padding: 20px;
+ }
+ 
+ .title {
+   margin-top: 0%;
+   margin-bottom: 0%;
+   font-size: 10rem;
+   -webkit-text-stroke: 0.5px rgb(243, 173, 21);
+   color: black;
+   
+ }
+ 
+
+ .digimon-button {
+    background-color: #0b4a84;
+    border-color: #fea528;
+    border-radius: 20px;
+ }
+
+ .digimon-button:hover {
+   background-color: #fea128;
+ 
+   transition: 0.1s;
+ 
+   opacity: 0.9;
+ }
+
+ .div-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+ }
+
+
+ .digimon-list {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+ 
+
+ }
+
+ .result {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    height: 500px;
+    background-color: #0b4a84;
+    border: 5px solid  rgb(243, 173, 21);
+    border-radius: 20px;
+    
+ }
+                
