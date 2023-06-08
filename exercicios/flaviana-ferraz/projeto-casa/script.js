@@ -1,7 +1,5 @@
 const container = document.getElementById('demo')
-const digimon = document.getElementById('digimonName')
-const card = document.getElementById('card')
-const buscar = document.getElementById('buscar')
+// const buscar = document.getElementById('buscar')
 
 
 // buscar.addEventListener('click', (event)=> {
@@ -28,18 +26,31 @@ async function getDigimons(){
 
 function input(digimon){
     return `
-    <input id="digi" type="button" value="${digimon.name}" onclick="createCardDigimon('${digimon.name}')">
+    <button id="digi" onclick="createCardDigimon('${digimon.name}')">${digimon.name}</button>
   `
 }
 
 async function main(){
+    try {
         const digiName = await getDigimons( )
-        digiName.map((digimon) => {container.innerHTML += input(digimon)})
+        digiName.map((digimon) => {container.innerHTML += input(digimon)})  
+    } catch (erro) {
+        console.error("Erro capturado: " + erro)
+    }     
 }
 
-main()   
+function createCardDigimon(digi){
+    const img = document.getElementById('imgDigimon')
+    img.src = digi[0].img
 
-async function findDigimon(digi){
+    const digimon = document.getElementById('digimonName')
+    digimon.innerHTML = digi[0].name
+
+    const level = document.getElementById('level')
+    level.innerHTML = digi[0].level
+}
+
+async function getOneDigimon(digi){
     try {
         let digimon = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${digi}`);
         let infos = await digimon.json();
@@ -49,14 +60,7 @@ async function findDigimon(digi){
     }
 }
 
-function createCardDigimon(digi){
-    card.innerHTML += `
-        <img src="${digi.img}">
-        <h3>${digi.name}</h3>
-        <h4 id="level">Level: ${digi.level}</h4>
-    `
-}
-
+main() 
 
 
 
