@@ -15,17 +15,39 @@
   </head>
 
   <body>
-    
+    <div class="container">
       <h1>
         <img src="Digimon-Logo-PNG-Free-Download.png" id="banner" />
       </h1>
-    
 
-    <main>
-      <section id="digimon-list"></section>
-      <section id="digimon-details"></section>
-    </main>
+      <main>
+        <section id="digimon-list"></section>
+        <section id="digimon-details"></section>
+      </main>
 
-    <script defer src="script.js"></script>
+      <script defer src="script.js">
+
+*// teste responsividade - estudos 
+
+               $(document).ready(function()
+                {
+                var largura = $(window).width(); 
+                if (largura <= 921) {
+                $("#hire").hide(); 
+                $("#resize").hide(); 
+                }
+
+                else if (tam >= 922) {
+              
+                $("#hire").show(); 
+                $("#resize").show();
+                }
+        });
+      </script>
+    </div>
   </body>
+
+<footer> Reprograma On23 - JS - Semana 11. Dev: Petra Fernandes. 2023</footer>
+
 </html>
+

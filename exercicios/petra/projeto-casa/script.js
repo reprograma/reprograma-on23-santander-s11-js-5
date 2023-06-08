@@ -5,7 +5,9 @@
 //4. segunda endpoint e response 
 
 //const digimonList = document.getElementById('digimon-list')
-//const digimonDescription = document.getElementById('digimon-description')
+//const digimonDescription ou Details = document.getElementById('digimon-description') ? 
+
+//*versão final do exercício 
 
 //função requisição API - fetch com trycatch 
 
