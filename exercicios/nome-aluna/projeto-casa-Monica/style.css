@@ -1,0 +1,24 @@
+body{
+
+    background: linear-gradient( #ffffff, #f6bff5, #ff36d4, #fe2929,#05ff12,#02ffb7, #5073fb, blue);
+  background-repeat: no-repeat;
+height: 680px;
+width: 100%;
+ 
+}
+  
+
+h1{
+size: 16px;
+color: blue;
+justify-content: center;
+text-align: center;
+
+}
+
+button{
+
+    color: #ffffff;
+    background-color: blueviolet;
+
+}
