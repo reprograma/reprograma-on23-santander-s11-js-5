@@ -1,0 +1,78 @@
+
+* {
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+
+}
+
+body {
+
+    background: rgb(206, 189, 224);
+    background: linear-gradient(
+      90deg,
+      rgba(206, 189, 224, 1) 0%,
+      rgba(199, 107, 198, 0.9948354341736695) 12%,
+      rgba(255, 148, 253, 0.9864320728291317) 43%,
+      rgba(255, 91, 235, 1) 60%,
+      rgba(255, 91, 235, 1) 76%
+    );
+
+  }
+
+main {
+
+    display: flex;
+
+  }
+
+h1 {
+
+  text-align: center;
+
+}
+
+
+#banner {
+  width: 30%;
+}
+
+#digimon-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 30em;
+  overflow-x: scroll;
+}
+
+#digimon-details div {
+    background-color: rgba(204, 33, 113, 0.562);
+    margin-left: 2em;
+    justify-content: center;
+    text-align: center;
+    color:rgb(252, 252, 207);
+    margin-right: 2em;
+}
+
+.digimon-input-name :hover {
+    transform: scale(1.1);
+    transition: all 0.8s;
+
+} 
+
+.digimon-input-name {
+  font-family: 'Karla', sans-serif;
+  width: 10em;
+  height: 2em;
+  margin: 0.2em;
+  text-align: center;
+  background-color: rgba(204, 33, 113, 0.562);
+  color: rgb(252, 252, 207);
+  text-transform: uppercase;
+  border: 2px double #ebd373;
+  text-shadow: -1px -1px 14px rgba(109,111,225,0.58);
+}
+
+

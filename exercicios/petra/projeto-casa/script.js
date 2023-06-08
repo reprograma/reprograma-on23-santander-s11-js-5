@@ -4,58 +4,60 @@
 //3. inner HTML;
 //4. segunda endpoint e response 
 
-const listContainer = document.getElementById('digimon-list')
-const digimonDescription = document.getElementById('digimon-description')
+//const digimonList = document.getElementById('digimon-list')
+//const digimonDescription = document.getElementById('digimon-description')
 
 //função requisição API - fetch com trycatch 
 
-async function getDigimonList(){
-    try {
-        let digimon = await fetch("https://digimon-api.vercel.app/api/digimon")
-        digimon = await digimons.json()
-        return digimon
+const digimonList = document.getElementById('digimon-list');
+const digimonDetails = document.getElementById('digimon-details');
 
-    } catch (error) {
-        console.log("error: " + error)
-    }
+function createList(digimon) {
+  return `
+  <input type="button" class="digimon-input-name" value="${digimon.name}" onclick="getDigimonName('${digimon.name}')">
+  `
 }
 
-async function fillList() {
-    
-    try {
-        const digimon = await getDigimonList()
-        digimon.forEach((digimon) => listContainer.innerHTML += convertListToHtml(digimon))
-
-    } catch (error) {
-        console.log("error captured: " + error)
-    }
+async function getDigimons() {
+  try {
+    const response = await fetch('https://digimon-api.vercel.app/api/digimon');
+    const digimon = await response.json();
+    return digimon;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function convertListToHtml(digimon) {
-    return `<input class="digimon-list__button" type="button" value="${digimon.name}" onclick="getDigimonWhenClicked('${digimon.name}')">`
+//Inner HTML - lista de digimons 
+
+async function dataInputs() {
+    const digimons = await getDigimons();
+    digimons.forEach(digimon => digimonList.innerHTML += createList(digimon));
+  }
+  
+  dataInputs();
+
+// Cards 
+
+function createCards(digimonGetName) {
+    digimonDetails.innerHTML =
+    `
+      <div>
+        <img src="${digimonGetName[0].img}" alt="image-digimon">
+        <h2>${digimonGetName[0].name}</h2>
+        <p>Level: ${digimonGetName[0].level}</p>
+      </div>
+    `
+  }
+
+//endpoint d.names 
+async function getDigimonName(digimon) {
+  try {
+    const response = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${digimon}`);
+    const digimonGetName = await response.json();
+    createCards(digimonGetName);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-fillDigimonList()
-
-//async function second endpoint 
-
-async function getDigimonAfterClick(digimonName){
-    
-    try {
-        let digimon = (await fetch(`https://digimon-api.vercel.app/api/digimon/name/${digimonName}`))
-        digimon = await digimon.json()
-
-        resultContainer.innerHTML = ` <div class="digimon-result__img">
-        <img src="${digimon[0].img}" alt="${digimon[0].name} image">
-    </div>
-    <div class="digimon-result__text">
-        <h2>Name: ${digimon[0].name}</h2>
-        <p>Level: ${digimon[0].level}</p>
-    </div>`
-    } 
-    
-    catch (error) {
-        console.log("error captured: " + error)
-    }
-
-}
