@@ -25,7 +25,51 @@ body {
     font-size: 16px;
   }
   
-  #digimon-info {
-    text-align: center;
+  .banner{
+    display: block;
+    margin:auto;
+    margin-bottom: 1%;
+    border-radius: 20px;
   }
   
+  #digimon-info {
+    text-align: center;
+    display:grid;
+  }
+
+  #digimon-container{
+    float: right;
+    margin-top: 20px;
+  }
+  
+  li {
+    list-style: none;
+    background-color: white;
+    flex-wrap: wrap;
+  }
+
+  #digimon-list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 4 colunas */
+    grid-gap: 10px; /* Espaço entre os quadrinhos */
+  }
+
+  #digimon-list li {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #digimon-list li img {
+    max-width: 100px;
+    margin-right: 10px;
+    
+  }
+
+  #digimon-list li span {
+    flex-grow: 1;
+  }
+

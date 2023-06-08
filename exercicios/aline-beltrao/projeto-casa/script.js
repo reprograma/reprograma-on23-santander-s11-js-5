@@ -25,9 +25,12 @@ async function buscarDigimon(){
     } 
 }
 
+const digimonContainer = document.getElementById('digimon-container')
+
 function exibirDetalhesDigimon(digimon) {
     try {
-        digimonInfo.innerHTML = ''
+        const digimonInfo = document.createElement('div')
+        digimonInfo.classList.add('digimon-info')
 
         const digimonName = document.createElement('h2')
         digimonName.textContent = digimon.name
@@ -42,8 +45,13 @@ function exibirDetalhesDigimon(digimon) {
         digimonInfo.appendChild(digimonImage)
         digimonInfo.appendChild(digimonLevel)
 
+        digimonContainer.innerHTML = ''
+        digimonContainer.appendChild(digimonInfo)
+
     } catch (error) {
         console.error("Ocorreu um erro ao buscar informações do Digimon: ", error)
     }
 }
+
+buscarDigimon()
 /*ver aqui esses atributos, então incorretos*/
