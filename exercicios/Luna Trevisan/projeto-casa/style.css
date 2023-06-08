@@ -3,29 +3,48 @@
     font-style: normal;
     font-weight: normal;
     src: local('MonospaceTypewriter'), url('MonospaceTypewriter.woff') format('woff');
-
 }
 
 * {
-margin: 10;
-padding: 10;
-box-sizing: border-box;
-font-size: 11px;
-
+    font-size: 92%;
 }
 
 #imagemDigimon {
-    width: 20%;
-
+    width: 70%;
+    margin-bottom: 2%;
 }
 
 #digimonList {
     display: grid;
     grid-template-columns: repeat(11, 0fr);
+    margin-top: 1%;
+}
+
+#digimonList button {
+    background-image: linear-gradient(to right, #ff00c3, #8c00ff);
+    color: whitesmoke;
 }
 
 #banner {
     display: block;
     margin: auto;
+    margin-bottom: 1%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10em;
+}
 
+#Buscar, #pesquisar {
+  display: block;
+  margin: 0 auto;
+}
+
+#resultado {
+    float: right;
+    margin-top: 20px;
+}
+
+#nameDigimon, #lvlDigimon {
+    text-align: center;
+    margin-right: 20%;
+    font-size: 130%;
 }
