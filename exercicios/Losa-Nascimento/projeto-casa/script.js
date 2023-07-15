@@ -1,25 +1,40 @@
-async function getReturn() {
-    try {
-      const response = await fetch('/api/digimon')
-      const data = await response.json()
-      console.log(data)
-    }
-    catch(erro) {
-      console.log("capturei um erro: " + erro)
-    }
-  }
-  
-  
-  async function getName () {
-    try {
-        const response = await fetch('/api/digimon/name/:name')
-        const data = await response.json()
-        console.log(data)
-      }
-      catch(erro) {
-        console.log("capturei um erro: " + erro)
-      }
-  }
+const list = document.getElementById('list')
+const card = document.getElementById('card')
 
-  //desisti, desculpa por não tentar mais professora, espero que revisando esse conteúdo inavada a minha mente porque tá complicado. 
-  
+async function getList() {
+  try {
+    const response = await fetch('https://digimon-api.vercel.app/api/digimon')
+    const digimons = await response.json()
+    renderList(digimons)
+  }
+  catch(erro) {
+    console.error("Capturei um erro: ", erro)
+  }
+}
+
+
+function renderList(items) {
+  items.forEach((item) => list.innerHTML +=
+  `<input class="buttons" type="submit" value=${item.name} onclick="getDigimon(this.value)">`)
+}
+
+async function getDigimon(nome) {
+  try {
+    const response = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${nome}`)
+    const digimon = await response.json()
+    renderDigimon(digimon[0])
+  }
+  catch(erro) {
+    console.error("Capturei um erro: ", erro)
+  }
+}
+
+function renderDigimon(digimon) {
+  card.innerHTML = `
+    <img src=${digimon.img}>
+    <h3>Name: ${digimon.name}</h3>
+    <p>Level: ${digimon.level}</p>
+  `
+}
+
+getList()
